@@ -7,15 +7,18 @@
   <title>Sander Asia Mat</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Sander Asia Mat</div>
+    <button class="nav-toggle" aria-label="Åpne meny">&#9776;</button>
     <nav>
       <a href="index.html" class="active">Hjem</a>
       <a href="meny.html">Meny</a>
     </nav>
   </header>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -50,8 +53,8 @@
   <!-- Kontakt -->
   <section class="content" id="kontakt">
     <h2>Kontakt oss</h2>
-    <p>📞 Telefon: <a href="tel:91340000">91 34 00 00</a></p>
-    <p>📧 E-post: <a href="mailto:kontakt@sanderasiamat.no">kontakt@sanderasiamat.no</a></p>
+    <p>Telefon: <a href="tel:91340000">91 34 00 00</a></p>
+    <p>E-post: <a href="mailto:kontakt@sanderasiamat.no">kontakt@sanderasiamat.no</a></p>
 
   <h3>Her finner du oss</h3>
   <div class="map">
@@ -69,9 +72,18 @@
 
   <!-- Footer -->
   <footer>
-    <p>📍 Adresse: Bakkesvingen 19, 2830 Raufoss</p>
+    <p>Bakkesvingen 19, 2830 Raufoss</p>
     <p>© 2025 Sander Asia Mat | Nettside utviklet av <a href="https://anteria.no" target="_blank">Anteria AS</a></p>
   </footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.navbar nav');
+
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
