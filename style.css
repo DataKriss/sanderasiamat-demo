@@ -1,0 +1,301 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+/* fjerne text decoration på lenker */
+a {
+  text-decoration: none;
+}
+
+/* For sikkerhets skyld: også knapp-linkene */
+.cta-buttons .btn {
+  text-decoration: none;
+}
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.navbar nav a {
+  margin-left: 1.5em;
+  font-weight: 500;
+  transition: color 0.2s;
+  color: #333;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #f48bb0;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* juster 0.4 til mer/mindre mørkt */
+  z-index: -1;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%);
+}
+
+.hero-text {
+  max-width: 670px;
+  padding: 2em;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-text h1,
+.hero-text p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.cta-buttons .btn {
+  background: #f48bb0;
+  color: white;
+  padding: 0.8em 1.5em;
+  border-radius: 30px;
+  margin: 0.5em;
+  display: inline-block;
+  transition: background 0.3s;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.cta-buttons .btn:hover {
+  background: #4caf50;
+}
+
+/* Page Content */
+.content {
+  padding: 6em 2em 3em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.content h1, .content h2 {
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.content p {
+  margin-bottom: 1em;
+}
+
+/* Menu page */
+.menu-list {
+  display: grid;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.menu-item {
+  background: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.menu-item h2 {
+  margin-bottom: 0.5em;
+}
+
+.menu-item .price {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  font-weight: bold;
+  color: #f48bb0;
+}
+
+/* Featured menu item */
+.menu-item.featured {
+  background: #f9f9f9;              /* samme bakgrunn som de andre */
+  border: 2px solid #f48bb0;        /* bruk rosa som aksent */
+  text-align: center;
+  transform: scale(1.02);           /* gjør boksen bittelitt større */
+}
+
+.menu-item.featured h2 {
+  color: #333;                      /* behold samme headingfarge */
+  font-size: 1.5rem;
+  margin-bottom: 0.3em;
+}
+
+.menu-item.featured p {
+  font-style: italic;               /* litt annerledes for å skille seg ut */
+  color: #666;
+}
+
+.menu-item.featured .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #4caf50;                   /* grønn for pris */
+}
+
+.fb-btn {
+  background: #3b5998;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 0.8em;
+  transition: background 0.3s;
+  font-size: 0.9rem;
+}
+
+.fb-btn:hover {
+  background: #2d4373;
+}
+
+
+
+/* Open Hours */
+.open-hours {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+}
+
+.open-hours li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#kontakt a {
+  color: inherit;        /* samme farge som teksten rundt */
+  text-decoration: none; /* fjern understrek */
+  color: #f48bb0;
+}
+
+#kontakt a:hover {
+  color: #4caf50;        /* rosa aksentfarge ved hover */
+}
+
+
+/* Map */
+.map iframe {
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 2em 1em;
+  margin-top: 3em;
+  font-size: 0.9rem;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #f48bb0;
+}
+
+footer p {
+  margin: 0.3em 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Mobile-first adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .cta-buttons .btn {
+    display: block;
+    margin: 0.5em auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .menu-list {
+    grid-template-columns: 1fr; /* én kolonne */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .hero-text {
+    padding: 1em;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+}
