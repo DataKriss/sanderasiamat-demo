@@ -12,8 +12,8 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Sander Asia Mat</div>
-    <button class="nav-toggle" aria-label="Åpne meny">&#9776;</button>
-    <nav>
+    <button class="nav-toggle" aria-label="Åpne meny" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
+    <nav id="primary-navigation">
       <a href="index.html">Hjem</a>
       <a href="meny.html">Meny</a>
     </nav>
@@ -165,7 +165,9 @@
   const nav = document.querySelector('.navbar nav');
 
   navToggle.addEventListener('click', () => {
-    nav.classList.toggle('show');
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isExpanded));
+    nav.classList.toggle('show', !isExpanded);
   });
 </script>
 
